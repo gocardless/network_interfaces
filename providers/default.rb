@@ -64,7 +64,7 @@ action :save do
       post_down:    Chef::Recipe::NetworkInterfaces.value(:post_down,  new_resource.device, new_resource, node),
       custom:       Chef::Recipe::NetworkInterfaces.value(:custom,     new_resource.device, new_resource, node)
     )
-    notifies :run, "execute[if_up #{new_resource.name}]", :immediately
+    notifies :run, "execute[if_up #{new_resource.name}]", :immediately unless new_resource.skip_notify
     notifies :create, 'ruby_block[Merge interfaces]', :delayed
   end
 
