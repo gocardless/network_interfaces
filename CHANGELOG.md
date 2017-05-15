@@ -1,9 +1,12 @@
 network_interface
 =================
 
+v1.0.2 (2017-05-15)
+-------------------
+- Provide option to prevent notification of if_up after interface changes
+
 v1.0.0 (2014-03-03)
 -------------------
-
 - released version on community
 
 
